@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Today</title>
+    <link rel="stylesheet" href="public/fonts/fontawesome-free-5.12.1-web/css/all.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/grid.css">
+</head>
+<body>
+   <header class="header">
+       <div class="grid wide header-content">
+        <div class="logo">
+           <h2>Todo Today</h2>
+        </div>
+        <ul class="list-items-m m-0">
+            <li class="list-item-m"><span class="list-item__text">Đầu tư</span></li>
+            <li class="list-item-m"><span class="list-item__text">Đầu tư</span></li>
+            <li class="list-item-m"><span class="list-item__text">Đầu tư</span></li>
+            <li class="list-item-m"><span class="list-item__text">Đầu tư</span></li>
+            <li class="list-item-m"><span class="list-item__text">Đầu tư</span></li>
+            <li class="list-item-m"><span class="list-item__text">Đầu tư</span></li>
+        </ul>
+       </div>
+   </header>
+   <section class="section">
+       <div class="grid wide">
+           <div class="row">
+               <div class="form-group col l-6">
+                   <input id="todo-content" class="form-control" type="text" placeholder="Add new tasks"/>
+                   <div class="select-box">
+                        <div class="select-box__item badge badge--success selected" onclick="selectItem(this,0)">
+                           Low 
+                        </div>
+                        <div class="select-box__item badge badge--warning" onclick="selectItem(this,1)">
+                            Mid
+                        </div>
+                        <div class="select-box__item badge badge--danger" onclick="selectItem(this,2)">
+                            Hight
+                        </div>
+                   </div>
+               </div>
+                <button class="btn btn--dark" onclick="todo.addItem(document.getElementById('todo-content'))">Thêm</button>
+           </div>
+        </div>
+       </div>
+   </section>
+   <div class="container">
+       <div class="grid wide">
+        <div class="row">
+            <div class="col m-12 t-12 l-12">
+                <table class="classic-table" id="table-render">
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>Content</td>
+                            <td>Level</td>
+                            <td>Status</td>
+                            <td>Date</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="t-body-render">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       </div>
+   </div>
+   <script src="public/js/main.js"></script>
+</body>
+</html>
