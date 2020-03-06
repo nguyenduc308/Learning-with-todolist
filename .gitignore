@@ -2,6 +2,9 @@
 
 # dependencies
 todo-reactjs-class/node_modules
+todo-reactjs-class-redux/node_modules/
+todo-reactjs-class-2/node_modules
+todo-reactjs-class-redux/node_modules
 /.pnp
 .pnp.js
 
